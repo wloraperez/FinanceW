@@ -1,0 +1,60 @@
+﻿@model FinanceW.Models.CreditCardCut
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditCardCut</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PayDayCut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PayDayCut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PayDayLimit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PayDayLimit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountCut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmountCut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountPayment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmountPayment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountPending)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmountPending)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Alias)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CreditCardCutId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

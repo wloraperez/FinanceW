@@ -1,0 +1,68 @@
+﻿@model IEnumerable<FinanceW.Models.CreditCardCut>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PayDayCut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayDayLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountCut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPayment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPending)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayDayCut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayDayLimit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountCut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountPayment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountPending)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Alias)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CreditCardCutId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CreditCardCutId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

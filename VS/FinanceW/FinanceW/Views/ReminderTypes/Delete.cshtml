@@ -1,0 +1,51 @@
+﻿@model FinanceW.Models.ReminderType
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ReminderType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceHour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceHour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceDay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceMonth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceMonth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceYear)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ReminderTypeId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

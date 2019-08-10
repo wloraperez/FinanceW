@@ -1,0 +1,2 @@
+Id	ClaimType	ClaimValue	UserId
+1	ADMIN	X	4929ef12-37be-4090-8954-25b42b0e8d30

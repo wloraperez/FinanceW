@@ -1,0 +1,52 @@
+﻿@model FinanceW.Models.CurrencyConvert
+@{
+    ViewData["Title"] = "Create";
+}
+<h2>Create</h2>
+<h4>CurrencyConvert</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Multiple" class="control-label"></label>
+                <input asp-for="Multiple" class="form-control" />
+                <span asp-validation-for="Multiple" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrencyFromCurrencyId" class="control-label"></label>
+                <select asp-for="CurrencyFromCurrencyId" class="form-control" asp-items="ViewBag.CurrencyFromCurrencyId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrencyToCurrencyId" class="control-label"></label>
+                <select asp-for="CurrencyToCurrencyId" class="form-control" asp-items="ViewBag.CurrencyToCurrencyId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateValidFrom" class="control-label"></label>
+                <input asp-for="DateValidFrom" class="form-control" />
+                <span asp-validation-for="DateValidFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateValidTo" class="control-label"></label>
+                <input asp-for="DateValidTo" class="form-control" />
+                <span asp-validation-for="DateValidTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusCurrency" class="control-label"></label>
+                <select asp-for="StatusCurrency" class="form-control"
+                        asp-items="Html.GetEnumSelectList<FinanceW.Models.Enum.StatusCurrency>()"></select>
+                <span asp-validation-for="StatusCurrency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

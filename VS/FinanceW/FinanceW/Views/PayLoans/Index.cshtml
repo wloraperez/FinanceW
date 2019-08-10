@@ -1,0 +1,83 @@
+﻿@model IEnumerable<FinanceW.Models.PayProduct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PayProductDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StatusPayProduct)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCardCut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductTo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PayProductDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusPayProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditCardCut.CreditCardCutId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductFrom.Alias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductTo.Alias)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PayProductId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PayProductId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PayProductId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

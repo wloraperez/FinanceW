@@ -1,0 +1,57 @@
+﻿@model FinanceW.Models.PayProduct
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>PayProduct</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductIdFrom" class="control-label"></label>
+                <select asp-for="ProductIdFrom" class ="form-control" asp-items="ViewBag.ProductIdFrom"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductIdTo" class="control-label"></label>
+                <select asp-for="ProductIdTo" class ="form-control" asp-items="ViewBag.ProductIdTo"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreditCardCutId" class="control-label"></label>
+                <select asp-for="CreditCardCutId" class ="form-control" asp-items="ViewBag.CreditCardCutId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tax" class="control-label"></label>
+                <input asp-for="Tax" class="form-control" />
+                <span asp-validation-for="Tax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PayProductDate" class="control-label"></label>
+                <input asp-for="PayProductDate" class="form-control" />
+                <span asp-validation-for="PayProductDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

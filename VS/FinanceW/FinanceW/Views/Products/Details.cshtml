@@ -1,0 +1,90 @@
+﻿@model FinanceW.Models.Product
+
+@{
+    ViewData["Title"] = "Detalle de producto";
+}
+
+<h2>Detalle de producto</h2>
+
+<div>
+    @*<h4>Product</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CutDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CutDay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DaysToPayCut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DaysToPayCut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusProduct)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StatusProduct)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.bank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.bank.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.currency)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.currency.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProductId">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

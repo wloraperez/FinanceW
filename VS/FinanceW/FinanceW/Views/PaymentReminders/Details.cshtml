@@ -1,0 +1,69 @@
+﻿@model FinanceW.Models.PaymentReminder
+@{
+    ViewData["Title"] = "Detalle de Recordatorio";
+}
+<h2>Detalle de Recordatorio</h2>
+<div>
+    @*<h4>PaymentReminder</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusPaymentReminder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StatusPaymentReminder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Expense)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Expense.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Alias)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReminderType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReminderType.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PaymentReminderId">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FinanceW.Models.CurrencyConvert>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Multiple)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateValidFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateValidTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusCurrency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrencyFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrencyTo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Multiple)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateValidFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateValidTo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusCurrency)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrencyFrom.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrencyTo.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CurrencyConvertId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CurrencyConvertId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

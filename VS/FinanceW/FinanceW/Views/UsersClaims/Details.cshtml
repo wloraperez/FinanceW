@@ -1,0 +1,36 @@
+﻿@model FinanceW.Models.ManageViewModels.UserClaimsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplicationUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClaimType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClaimValue)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FinanceW.Models.PaymentReminder>
+@{
+    ViewData["Title"] = "Recordatorios de pagos";
+}
+<h2>Recordatorios de pagos</h2>
+<p>
+    <a asp-action="Create">Nuevo Recordatorio</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReminderType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusPaymentReminder)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReminderType.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Alias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Expense.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusPaymentReminder)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PaymentReminderId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.PaymentReminderId">Detalle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

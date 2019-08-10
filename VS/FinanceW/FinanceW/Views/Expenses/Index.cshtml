@@ -1,0 +1,75 @@
+﻿@model IEnumerable<FinanceW.Models.Expense>
+@{
+    ViewData["Title"] = "Gastos recurrentes";
+}
+<h2>Gastos recurrentes</h2>
+<p>
+    <a asp-action="Create">Nuevo gasto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpenseTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CutDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayDayLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusExpense)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpenseTypeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.currency.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CutDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayDayLimit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusExpense)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ExpenseId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.ExpenseId">Detalle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

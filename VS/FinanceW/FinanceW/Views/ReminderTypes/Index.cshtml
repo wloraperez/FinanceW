@@ -1,0 +1,56 @@
+﻿@model IEnumerable<FinanceW.Models.ReminderType>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecurrenceHour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecurrenceDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecurrenceMonth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecurrenceYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecurrenceHour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecurrenceDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecurrenceMonth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecurrenceYear)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ReminderTypeId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ReminderTypeId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

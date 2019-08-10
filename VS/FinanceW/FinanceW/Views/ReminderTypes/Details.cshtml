@@ -1,0 +1,48 @@
+﻿@model FinanceW.Models.ReminderType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReminderType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceHour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceHour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceDay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceMonth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceMonth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurrenceYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecurrenceYear)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ReminderTypeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

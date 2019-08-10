@@ -1,0 +1,11 @@
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\bin\Debug\netcoreapp2.0\FinanceW.deps.json
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\bin\Debug\netcoreapp2.0\FinanceW.runtimeconfig.json
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\bin\Debug\netcoreapp2.0\FinanceW.runtimeconfig.dev.json
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\bin\Debug\netcoreapp2.0\FinanceW.dll
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\bin\Debug\netcoreapp2.0\FinanceW.pdb
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.csproj.CoreCompileInputs.cache
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.AssemblyInfoInputs.cache
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.AssemblyInfo.cs
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.dll
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.pdb
+C:\Users\wlora\OneDrive\Projects .Net\FinanceW\VS\FinanceW\FinanceW\obj\Debug\netcoreapp2.0\FinanceW.csprojAssemblyReference.cache
